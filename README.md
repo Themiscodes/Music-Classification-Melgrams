@@ -9,7 +9,7 @@ This project aims to provide a comprehensive understanding of the fundamental pr
 
 Music genre classification is a popular application of machine learning and one approach to this problem is to use Convolutional Neural Networks with Mel spectrograms as input. Mel spectrograms are a type of visual representation of audio signals that are commonly used in audio analysis and music information retrieval and they use a frequency scale that is based on the mel scale.
 
-![mel](melgrams.png)
+![melgrams](https://user-images.githubusercontent.com/73662635/219480800-f775980f-58dc-44a8-b9d1-dbfdf07c77d6.png)
 
 The model achieved over 80% accuracy and F1-Macro averaged score on the test set, but it had poor performance on new data. To combat this, several regularization techniques were implemented, including batch normalisation, dropout, weight decay and early stopping. Dropout and weight decay were used to reduce the complexity of the model and prevent it from fitting noise in the training data, while early stopping was used to prevent the model from overfitting by stopping the training process before the model started to perform poorly.
 
@@ -21,25 +21,25 @@ When the model was applied to classify music downloaded from YouTube and convert
 
 ### Blues
 
-![blues](sonhouse.png)
+![sonhouse](https://user-images.githubusercontent.com/73662635/219480772-8770d0e5-5162-46a7-96de-7d977201a106.png)
 
 - Regarding the "Blues" genre, the model's predictions were mainly concentrated on sections of the songs where the guitar and high frequencies were prevalent. However, during parts where other instruments like the bass were more dominant, the model classified them as either "Hip Hop" or "Rock". When classifying older songs though, like Son House's above, the model correctly classified the majority of it. This is likely because the song has minimal post-production additions and consists of just vocals and guitar.
 
 ### Classical
 
-![classical](mozart.png)
+![mozart](https://user-images.githubusercontent.com/73662635/219480757-6fc834d5-34e7-469a-9e94-0e91ac367d40.png)
 
 - The model achieved even better accuracy when predicting classical music, but it still misclassified sections of the songs as a different genre. When listening to these timestamps, it is evident that there are changes in the tone of the song that the model may be picking up on. For instance, Mozart's Lacrimosa is predicted as classical music with 80% accuracy, but there are seconds where the model classifies it as "Blues", which coincide to sections of the piece where the orchestra is not singing. 
 
 ### Hip Hop / Pop
 
-![nas](nas.png)
+![nas](https://user-images.githubusercontent.com/73662635/219480791-0b1dc82a-387d-4bb6-97e3-bb4376f08785.png)
 
 - The model had high accuracy when classifying Hip Hop songs with the "Hip Hop/Pop" genre, but struggled with some Pop songs. For instance, when classifying Nas' song, the model accurately predicted 90% of it as "Hip Hop". This is expected of course as such songs usually have a consistent, repetitive beat without many fluctuations.
 
 ### Rock
 
-![rock](nirvana.png)
+![nirvana](https://user-images.githubusercontent.com/73662635/219480743-f2b6f021-6717-4f80-abbe-210f530cdacd.png)
 
 - When classifying Rock songs, the model encountered the most difficulty. For instance, in the song "Drain You" by Nirvana, which starts with guitar and vocals, it is classified as Blues and Classical until the drums start in the 8th second, which is classified as Rock. It seems that the drums have some melodic feature that the model has learned for this classification. This trend was also observed in other Rock songs.
 
